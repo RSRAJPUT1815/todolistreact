@@ -1,6 +1,5 @@
-import { useState, useEffect, useContext, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Navbar from './components/Navbar'
-import { v4 as uuidv4 } from 'uuid';
 import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Toaster } from 'react-hot-toast';
@@ -11,8 +10,6 @@ import toast from 'react-hot-toast';
 function App() {
 
   const { Task, axios, fetchTasks } = useTaskContext()
-
-
   const [todo, setTodo] = useState("")
   const [isDone, setIsDone] = useState(false)
   const [showIsDone, setShowIsDone] = useState(false)
